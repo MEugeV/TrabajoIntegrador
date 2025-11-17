@@ -26,12 +26,12 @@ import java.util.List;
  */
 public class DomicilioFiscalDAO implements GenericDAO<DomicilioFiscal> {
 
-    private static final String INSERT_SQL = "INSERT INTO domicilioFiscal (calle, numero, ciudad, provincia, codigoPostal, pais) VALUES (?, ?, ?, ?, ?, ?)";///////////////VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+    private static final String INSERT_SQL = "INSERT INTO domicilioFiscal (calle, numero, ciudad, provincia, codigoPostal, pais) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String UPDATE_SQL = "UPDATE domicilioFiscal SET calle = ?, numero = ?, ciudad = ?, provincia = ?, codigoPostal = ?, pais = ? WHERE id = ?";
-    private static final String DELETE_SQL = "UPDATE domicilioFiscal SET eliminado = TRUE WHERE id = ?";///////////////VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+    private static final String DELETE_SQL = "UPDATE domicilioFiscal SET eliminado = TRUE WHERE id = ?";
     private static final String SELECT_BY_ID_SQL = "SELECT * FROM domicilioFiscal WHERE id = ? AND eliminado = FALSE";
     private static final String SELECT_ALL_SQL = "SELECT * FROM domicilioFiscal WHERE eliminado = FALSE";
-    private static final String RESET_SQL = "UPDATE domicilioFiscal SET eliminado = FALSE WHERE id = ?";///////////////VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+    private static final String RESET_SQL = "UPDATE domicilioFiscal SET eliminado = FALSE WHERE id = ?";
 
     private void setStatementParameters(PreparedStatement stmt, DomicilioFiscal domicilio) throws SQLException {
         stmt.setString(1, domicilio.getCalle());
